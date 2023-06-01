@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackback"
+        tools:context=".PaymentPlansActivity">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="/year"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/clicktextunlock2"
+            app:layout_constraintStart_toEndOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="351dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/noir_pro_semibold"
+            android:text="Choose a plan"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.086" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="Monthly or yearly? It's your call"
+            android:textColor="#A3A3A3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/clicktextunlock1"
+            android:layout_width="351dp"
+            android:layout_height="80dp"
+            android:background="@drawable/unlockplanroundborder"
+            android:clickable="true"
+            android:text="sample1"
+            android:textAlignment="center"
+            android:textColor="#101010"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintVertical_bias="0.038" />
+
+        <TextView
+            android:id="@+id/clicktextunlock2"
+            android:layout_width="351dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/unlockplanroundborder"
+            android:clickable="true"
+            android:textAlignment="center"
+            android:textColor="#101010"
+            app:layout_constraintBottom_toTopOf="@+id/textView23"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/clicktextunlock1"
+            app:layout_constraintVertical_bias="0.333" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="80dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/noir_pro_semibold"
+            android:text="\u0024175.00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/clicktextunlock2"
+            app:layout_constraintStart_toStartOf="@+id/clicktextunlock2" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="Monthly"
+            android:textColor="@color/pinka"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/clicktextunlock1"
+            app:layout_constraintTop_toTopOf="@+id/clicktextunlock1" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="Anually"
+            android:textColor="@color/pinka"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/clicktextunlock2"
+            app:layout_constraintTop_toTopOf="@+id/clicktextunlock2" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="70dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/noir_pro_semibold"
+            android:text="\u002415.00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/clicktextunlock1"
+            app:layout_constraintStart_toStartOf="@+id/clicktextunlock1" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="/month"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/clicktextunlock1"
+            app:layout_constraintStart_toEndOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="184dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/noir_pro_semibold"
+            android:text="Payment Method"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView24"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/clicktextunlock2" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="351dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="176dp"
+            android:background="@drawable/roundedrectangular_background"
+            android:text="TextView"
+            android:textColor="#292625"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="31dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toTopOf="@+id/textView24"
+            app:srcCompat="@drawable/creditcard" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintTop_toTopOf="@+id/textView24"
+            app:srcCompat="@drawable/pinkboldcircle" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="321dp"
+            android:layout_height="13dp"
+            android:scaleX="29"
+            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toTopOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.56"
+            app:srcCompat="@drawable/lightdivider" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="321dp"
+            android:layout_height="13dp"
+            android:scaleX="29"
+            app:layout_constraintBottom_toBottomOf="@+id/textView24"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toTopOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.693"
+            app:srcCompat="@drawable/lightdivider" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.666"
+            app:srcCompat="@drawable/donetickblack" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView24"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            app:layout_constraintVertical_bias="0.222"
+            app:srcCompat="@drawable/addcard" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="Credit/debit card"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="•••• 8302"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="0.165"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="New Card"
+            android:textColor="#FF9580"
+            app:layout_constraintBottom_toBottomOf="@+id/textView24"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintHorizontal_bias="0.133"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            app:layout_constraintVertical_bias="0.363" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="351dp"
+            android:layout_height="45dp"
+            android:background="@drawable/roundedrectangular_background"
+            android:text="sample"
+            android:textAlignment="textStart"
+            android:textColor="#292625"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.114" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/textView28"
+            app:layout_constraintEnd_toEndOf="@+id/textView28"
+            app:layout_constraintHorizontal_bias="0.927"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toTopOf="@+id/textView28"
+            app:layout_constraintVertical_bias="0.48"
+            app:srcCompat="@drawable/greylightcircle" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="Apple Pay"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/textView28"
+            app:layout_constraintEnd_toEndOf="@+id/textView28"
+            app:layout_constraintHorizontal_bias="0.259"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toTopOf="@+id/textView28"
+            app:layout_constraintVertical_bias="0.461" />
+
+        <ImageView
+            android:id="@+id/clickcircle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/clicktextunlock1"
+            app:layout_constraintEnd_toEndOf="@+id/clicktextunlock1"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="@+id/clicktextunlock1"
+            app:layout_constraintTop_toTopOf="@+id/clicktextunlock1"
+            app:layout_constraintVertical_bias="0.2"
+            app:srcCompat="@drawable/greylightcircle" />
+
+        <ImageView
+            android:id="@+id/clickcircle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/clicktextunlock2"
+            app:layout_constraintEnd_toEndOf="@+id/clicktextunlock2"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="@+id/clicktextunlock2"
+            app:layout_constraintTop_toTopOf="@+id/clicktextunlock2"
+            app:layout_constraintVertical_bias="0.2"
+            app:srcCompat="@drawable/greylightcircle" />
+
+        <Button
+            android:id="@+id/buttonpay"
+            android:layout_width="351dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/pinka"
+            android:fontFamily="@font/noir_pro_regular"
+            android:text="Pay"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28"
+            app:layout_constraintVertical_bias="0.757" />
+
+        <ImageButton
+            android:id="@+id/previousscreenbutton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#101010"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.363"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView28"
+            app:layout_constraintEnd_toStartOf="@+id/textView29"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toTopOf="@+id/textView28"
+            app:srcCompat="@drawable/applepay_icon" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/imageView11"
+            app:layout_constraintEnd_toStartOf="@+id/textView26"
+            app:layout_constraintHorizontal_bias="0.46"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.666"
+            app:srcCompat="@drawable/visaicon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
