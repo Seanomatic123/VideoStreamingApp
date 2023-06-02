@@ -23,7 +23,6 @@ public class LiveVideoActivity extends AppCompatActivity {
     private RtcEngine mRtcEngine;
     private String channelName;
     private int channelRole;
-    public static final String LOGIN_MESSAGE = "com.example.videostreamingapp.CHANNEL_LOGIN";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
