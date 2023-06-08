@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blackback"
+    android:background="@color/whitebackground"
     tools:context=".LiveVideoChoiceActivity">
 
     <TextView
         android:id="@+id/textview"
-        android:layout_width="283dp"
-        android:layout_height="60dp"
+        android:layout_width="316dp"
+        android:layout_height="99dp"
         android:layout_marginTop="72dp"
         android:fontFamily="@font/noir_pro_regular"
         android:text="Create a live stream or join an existing one"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/blacktext"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,24 +37,27 @@
         app:layout_constraintTop_toBottomOf="@+id/textview"
         app:layout_constraintVertical_bias="0.481">
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/hostchoice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/noir_pro_regular"
             android:onClick="onRadioButtonClicked"
+            app:buttonTint="@color/yellowbutton"
             android:text="@string/host"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/blacktext"
             android:textSize="14sp" />
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/audiencechoice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/noir_pro_regular"
             android:onClick="onRadioButtonClicked"
             android:text="@string/audience"
-            android:textColor="#FFFFFF"
+            app:buttonTint="@color/yellowbutton"
+            android:textColor="@color/blacktext"
+            android:gravity="center_vertical"
             android:textSize="14sp" />
     </RadioGroup>
 
@@ -65,36 +68,37 @@
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
         android:fontFamily="@font/noir_pro_regular"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blacktext"
         app:layout_constraintBottom_toTopOf="@+id/submitbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview2"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintVertical_bias="0.447" />
 
     <TextView
         android:id="@+id/textview2"
-        android:layout_width="147dp"
-        android:layout_height="37dp"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/noir_pro_regular"
+        android:gravity="center"
         android:text="Enter channel name: "
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+        android:textColor="@color/blacktext"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/enterchannelname"
         app:layout_constraintStart_toStartOf="@+id/enterchannelname"
         app:layout_constraintTop_toBottomOf="@+id/radiochoice" />
 
     <Button
         android:id="@+id/submitbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/pinka"
-        android:layout_marginBottom="216dp"
+        android:layout_width="257dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="144dp"
+        android:backgroundTint="@color/yellowbutton"
         android:onClick="onSubmit"
         android:text="Submit"
-        android:textColor="#000000"
+        android:textColor="@color/blacktext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -104,12 +108,12 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
-        android:backgroundTint="#101010"
+        android:backgroundTint="@color/whitebackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cancelicon"
-        app:tint="#FFFFFF" />
+        app:tint="@color/blacktext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
