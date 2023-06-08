@@ -35,7 +35,15 @@ dependencies {
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    implementation 'com.github.agorabuilder:native-full-sdk:3.7.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    def banubaSdkVersion = "1.7.0"
+    implementation "com.banuba.sdk:sdk_core:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:banuba_sdk_resources:${banubaSdkVersion}"
+
+    implementation 'com.banuba.sdk.android:agora-extension:1.2.0'
+
+    implementation 'io.agora.rtc:full-sdk:4.1.1'
+
 }

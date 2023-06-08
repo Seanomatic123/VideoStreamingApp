@@ -28,6 +28,12 @@
         android:layout_alignParentRight="true"
         android:background="@android:color/darker_gray" />
 
+    <Button
+        android:id="@+id/applyeffects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,8 +81,11 @@
                 android:background="@color/blackback"
                 android:src="@drawable/camerachangeicon" />
 
+
         </LinearLayout>
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

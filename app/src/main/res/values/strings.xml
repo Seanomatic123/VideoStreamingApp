@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Video Streaming App</string>
     <string name="private_app_id">2a3e4cf938f24bc9b4bf46e78e4eeaeb</string>
+    <string name="private_app_token">3a8408fbf21e4057b40338247ab441d1</string>
     <string name="host">Host</string>
     <string name="audience">Audience</string>
+    <string name="banuba_client_token">MB6b8cbOL2KbBJ62bCGpbzRKfEC8pkAjGbiOTzWLmBLc9QyYpAJuYDqQQO7GX7Ip9q9SahzxN70aRjbkRhS+A/AQwa/bZvSZHNBmJuLGiR4vkZZiOD2jhCfl+0SF2+P3VAT4ZIdUt5gs1VvLUW8DWAzoi1IXB78YjsT/8s+F9Bt5OzVgBSq2f13DLV3gFLYkALsuIes86cnMaZK8hTi8MFkua0foErroR1eX3SWQoHbvF/l7gM+rd4IQ8MECnmPmyCx36qhCzfzelPt67NCk5vhw9Q1CzgED8PP3pMxXrhkdZ2j7/KxuKfsPyHzjlZlrRlDZQKTw6W4CzrfZYyWeM+BJm8qFhEFEdmhLyiuhyGB7dkU=</string>
 </resources>
