@@ -4,7 +4,7 @@
     android:shape="oval"
     tools:ignore="ExtraText">
     <stroke
-        android:width="5dp" android:color="#FF9580" />
+        android:width="5dp" android:color="@color/yellowbutton" />
     <size
         android:width="20dp"
         android:height="20dp" />

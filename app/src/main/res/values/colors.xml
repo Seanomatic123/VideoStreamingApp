@@ -5,4 +5,7 @@
     <color name="white">#FFFFFFFF</color>
 	<color name="pinka">#FFFF9580</color>
 	<color name="blackback">#FF101010</color>
+    <color name="whitebackground">#f9fafe</color>
+    <color name="blacktext">#191C1D</color>
+    <color name="yellowbutton">#EA9C29</color>
 </resources>

@@ -12,7 +12,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#101010"
+    android:background="@color/whitebackground"
     tools:context=".UnlockVideoActivity">
 
     <ImageView
@@ -32,7 +32,7 @@
         android:layout_height="72dp"
         android:fontFamily="@font/noir_pro_semibold"
         android:text="Unlock or subscribe to watch the video"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blacktext"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
@@ -47,7 +47,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/noir_pro_regular"
         android:text="You will be able to regularly view paid user content if you buy a subscription  to it. This is much more profitable than buying access to posts individually"
-        android:textColor="#C6C6C6"
+        android:textColor="@color/blacktext"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,29 +59,45 @@
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/pinka"
+        android:backgroundTint="@color/yellowbutton"
         android:text="sample"
         android:textAlignment="center"
-        android:textColor="@color/pinka"
+        android:textColor="@color/yellowbutton"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/textviewunlock2"
+    <Button
+        android:id="@+id/buttonunlock2"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:layout_marginTop="6dp"
-        android:background="@drawable/roundborderbutton"
+        android:backgroundTint="@color/yellowbutton"
+        android:text="sample"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/yellowbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/buttonunlock1"
         app:layout_constraintVertical_bias="0.315" />
+<!--    <TextView-->
+<!--        android:id="@+id/textviewunlock2"-->
+<!--        android:layout_width="351dp"-->
+<!--        android:layout_height="49dp"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:backgroundTint="@color/yellowbutton"-->
+<!--        android:background="@drawable/roundborderbutton"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#000000"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imageView5"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/imageView5"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonunlock1"-->
+<!--        app:layout_constraintVertical_bias="0.315" />-->
 
     <TextView
         android:id="@+id/textView8"
@@ -90,12 +106,12 @@
         android:fontFamily="@font/noir_pro_regular"
         android:text="Unlock this video"
         android:textAlignment="center"
-        android:textColor="@color/pinka"
+        android:textColor="@color/blacktext"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textviewunlock2"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonunlock2"
         app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintStart_toStartOf="@+id/textviewunlock2"
-        app:layout_constraintTop_toTopOf="@+id/textviewunlock2" />
+        app:layout_constraintStart_toStartOf="@+id/buttonunlock2"
+        app:layout_constraintTop_toTopOf="@+id/buttonunlock2" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -103,11 +119,11 @@
         android:layout_height="0dp"
         android:scaleX="2"
         android:scaleY="1.25"
-        app:layout_constraintBottom_toBottomOf="@+id/textviewunlock2"
-        app:layout_constraintEnd_toEndOf="@+id/textviewunlock2"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonunlock2"
+        app:layout_constraintEnd_toEndOf="@+id/buttonunlock2"
         app:layout_constraintHorizontal_bias="0.689"
-        app:layout_constraintStart_toStartOf="@+id/textviewunlock2"
-        app:layout_constraintTop_toTopOf="@+id/textviewunlock2"
+        app:layout_constraintStart_toStartOf="@+id/buttonunlock2"
+        app:layout_constraintTop_toTopOf="@+id/buttonunlock2"
         app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@android:drawable/dark_header" />
 
@@ -158,18 +174,18 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/noir_pro_regular"
         android:text="\u00242"
-        android:textColor="@color/pinka"
+        android:textColor="@color/blacktext"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textviewunlock2"
-        app:layout_constraintEnd_toEndOf="@+id/textviewunlock2"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonunlock2"
+        app:layout_constraintEnd_toEndOf="@+id/buttonunlock2"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/textviewunlock2" />
+        app:layout_constraintTop_toTopOf="@+id/buttonunlock2" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:backgroundTint="#101010"
+        android:backgroundTint="@color/whitebackground"
         app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
@@ -177,7 +193,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.285"
         app:srcCompat="@drawable/cancelicon"
-        app:tint="#FFFFFF" />
+        app:tint="@color/blacktext" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

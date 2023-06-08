@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ import io.agora.rtc2.video.VideoCanvas;
 import io.agora.rtc2.video.VideoEncoderConfiguration;
 
 import com.banuba.android.sdk.ext.agora.BanubaExtensionManager;
+import com.banuba.sdk.effect_player.Effect;
 
 import java.util.Arrays;
 import java.util.List;
@@ -88,12 +90,9 @@ public class LiveVideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_video);
 
-
-
         Intent intent = getIntent();
         channelName = intent.getStringExtra(LiveVideoChoiceActivity.channelMessage);
         channelRole = intent.getIntExtra(LiveVideoChoiceActivity.profileMessage, -1);
-
         if(channelRole == -1) {
             Log.e("TAG: ", "No Role");
         }
@@ -103,14 +102,17 @@ public class LiveVideoActivity extends AppCompatActivity {
         invalidateUiState();
 
         findViewById(R.id.joinButton).setOnClickListener(v -> joinChannel());
-        findViewById(R.id.leaveButton).setOnClickListener(v -> leaveChannel());
+//        findViewById(R.id.leaveButton).setOnClickListener(v -> leaveChannel());
+        findViewById(R.id.applyTeethButton).setOnClickListener(v -> {
+            banubaExtensionManager.evalJs("Teeth.whitening(1)");
+            banubaExtensionManager.loadEffectFromAssets("Makeup");
+        });
         findViewById(R.id.applyEffectButton).setOnClickListener(v -> {
             toggleEffect();
             String effectName = getCurrentEffect();
             Log.d(TAG, "Prepare effect = " + effectName);
             banubaExtensionManager.loadEffectFromAssets(effectName);
         });
-
         enableBanubaExtension(true);
     }
     private void initAgoraEngineAndJoinChannel() {
@@ -221,10 +223,6 @@ public class LiveVideoActivity extends AppCompatActivity {
         ViewGroup remoteVideoContainer = findViewById(R.id.othervideoview);
         remoteVideoContainer.addView(view);
     }
-//        FrameLayout container = (FrameLayout) findViewById(R.id.othervideoview);
-//        SurfaceView surfaceView = RtcEngine.CreateRendererView(getBaseContext());
-//        container.addView(surfaceView);
-//        mRtcEngine.setupRemoteVideo(new VideoCanvas(surfaceView, VideoCanvas.RENDER_MODE_FIT, uid));
     private void onRemoteUserLeft() {
         ViewGroup container = findViewById(R.id.othervideoview);
         container.removeAllViews();
@@ -260,10 +258,14 @@ public class LiveVideoActivity extends AppCompatActivity {
 
         if (isJoinedToChannel) {
             findViewById(R.id.joinButton).setVisibility(View.GONE);
+            findViewById(R.id.headerpreview).setVisibility(View.GONE);
             findViewById(R.id.leaveButton).setVisibility(View.VISIBLE);
+            findViewById(R.id.headerjoined).setVisibility(View.VISIBLE);
         } else {
             findViewById(R.id.joinButton).setVisibility(View.VISIBLE);
+            findViewById(R.id.headerpreview).setVisibility(View.VISIBLE);
             findViewById(R.id.leaveButton).setVisibility(View.GONE);
+            findViewById(R.id.headerjoined).setVisibility(View.GONE);
         }
     }
     private String getCurrentEffect() {
@@ -320,7 +322,7 @@ public class LiveVideoActivity extends AppCompatActivity {
     }
     public void onLocalVideoMuteClicked(View view) {
         ImageView muteVidView = (ImageView) view;
-        FrameLayout container = (FrameLayout) findViewById(R.id.ownvideoview);
+        RelativeLayout container = (RelativeLayout) findViewById(R.id.ownvideoview);
         SurfaceView surfaceView = (SurfaceView) container.getChildAt(0);
 
         if (muteVidView.isSelected()) {
@@ -379,4 +381,6 @@ public class LiveVideoActivity extends AppCompatActivity {
                     + error + " error:" + message);
         }
     }
+
+
 }
