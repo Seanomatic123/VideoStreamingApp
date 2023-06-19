@@ -25,7 +25,7 @@ import io.agora.rtc2.video.VideoCanvas;
 import io.agora.rtc2.video.VideoEncoderConfiguration;
 
 import com.banuba.android.sdk.ext.agora.BanubaExtensionManager;
-import com.banuba.sdk.effect_player.Effect;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -64,6 +64,8 @@ public class LiveVideoActivity extends AppCompatActivity {
     private boolean isFrontCamera = true;
     private String channelName;
     private int channelRole;
+
+    private boolean isMakeUpApplied = false;
     BanubaExtensionManager banubaExtensionManager = BanubaExtensionManager.INSTANCE;
 
     private class AgoraEventHandler extends IRtcEngineEventHandler {
@@ -102,10 +104,15 @@ public class LiveVideoActivity extends AppCompatActivity {
         invalidateUiState();
 
         findViewById(R.id.joinButton).setOnClickListener(v -> joinChannel());
-//        findViewById(R.id.leaveButton).setOnClickListener(v -> leaveChannel());
         findViewById(R.id.applyTeethButton).setOnClickListener(v -> {
-            banubaExtensionManager.evalJs("Teeth.whitening(1)");
+            isMakeUpApplied = !isMakeUpApplied;
             banubaExtensionManager.loadEffectFromAssets("Makeup");
+            if(isMakeUpApplied) {
+                banubaExtensionManager.evalJs("Teeth.whitening(1)");
+            }
+            else {
+                banubaExtensionManager.evalJs("Teeth.clear()");
+            }
         });
         findViewById(R.id.applyEffectButton).setOnClickListener(v -> {
             toggleEffect();
@@ -114,6 +121,9 @@ public class LiveVideoActivity extends AppCompatActivity {
             banubaExtensionManager.loadEffectFromAssets(effectName);
         });
         enableBanubaExtension(true);
+
+
+
     }
     private void initAgoraEngineAndJoinChannel() {
         RtcEngineConfig rtcEngineConfig = new RtcEngineConfig();
@@ -214,6 +224,7 @@ public class LiveVideoActivity extends AppCompatActivity {
                     getApplicationContext().getResources().getString(R.string.banuba_client_token),
                     mRtcEngine
             );
+
         }
 
     }

@@ -112,8 +112,8 @@ class FaceMorph {
        0 Eyebrows spacing         - Adjusting the space between the eyebrows [-1;1]
        1 Eyebrows height          - Raising/lowering the eyebrows [-1;1]
        2 Eyebrows bend            - Adjusting the bend of the eyebrows [-1;1]
-       3 Eyes rounding            - Adjusting the roundness of the eyes [0;1]
-       4 Eyes enlargement         - Enlarging the eyes [0;1]
+       3 Eyes enlargement         - Enlarging the eyes [0;1]
+       4 Eyes rounding            - Adjusting the roundness of the eyes [0;1]
        5 Eyes height              - Raising/lowering the eyes [-1;1]
        6 Eyes spacing             - Adjusting the space between the eyes [-1;1]
        7 Eyes squint              - Making the person squint by adjusting the eyelids [-1;1]
@@ -172,10 +172,10 @@ class FaceMorph {
     **/
     eyes(params) {
         if (typeof params === "number")
-            morphs_00_vec4.w(params);
+            morphs_04_vec4.x(params);
         if (typeof params === "object") {
-            params.rounding && morphs_00_vec4.w(params.rounding);
-            params.enlargement && morphs_04_vec4.x(params.enlargement);
+            params.rounding && morphs_04_vec4.x(params.rounding);
+            params.enlargement && morphs_00_vec4.w(params.enlargement);
             params.height && morphs_04_vec4.y(params.height);
             params.spacing && morphs_04_vec4.z(params.spacing);
             params.squint && morphs_04_vec4.w(params.squint);

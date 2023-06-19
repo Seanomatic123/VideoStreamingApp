@@ -75,7 +75,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
-        android:backgroundTint="#b5bdcb" />
+        android:text="Makeup"
+        android:backgroundTint="@color/yellowbutton" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/joinButton"

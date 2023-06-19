@@ -9,6 +9,8 @@ vec2 var_uv;
 
 void main()
 {
+
     gl_Position = vec4(attrib_pos.xy, 0., 1.);
     var_uv = attrib_pos * 0.5 + 0.5;
+
 }

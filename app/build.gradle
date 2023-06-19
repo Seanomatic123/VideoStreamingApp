@@ -38,6 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    implementation "com.banuba.sdk:banuba_sdk:1.7.0"
     def banubaSdkVersion = "1.7.0"
     implementation "com.banuba.sdk:sdk_core:${banubaSdkVersion}"
     implementation "com.banuba.sdk:banuba_sdk_resources:${banubaSdkVersion}"
