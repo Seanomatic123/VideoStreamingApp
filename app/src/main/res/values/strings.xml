@@ -5,4 +5,38 @@
     <string name="host">Host</string>
     <string name="audience">Audience</string>
     <string name="banuba_client_token">MB6b8cbOL2KbBJ62bCGpbzRKfEC8pkAjGbiOTzWLmBLc9QyYpAJuYDqQQO7GX7Ip9q9SahzxN70aRjbkRhS+A/AQwa/bZvSZHNBmJuLGiR4vkZZiOD2jhCfl+0SF2+P3VAT4ZIdUt5gs1VvLUW8DWAzoi1IXB78YjsT/8s+F9Bt5OzVgBSq2f13DLV3gFLYkALsuIes86cnMaZK8hTi8MFkua0foErroR1eX3SWQoHbvF/l7gM+rd4IQ8MECnmPmyCx36qhCzfzelPt67NCk5vhw9Q1CzgED8PP3pMxXrhkdZ2j7/KxuKfsPyHzjlZlrRlDZQKTw6W4CzrfZYyWeM+BJm8qFhEFEdmhLyiuhyGB7dkU=</string>
+
+    <string-array name="item_Models_Name">
+        <item>Shaunaq</item>
+        <item>Milee</item>
+        <item>Emma</item>
+        <item>Martin</item>
+        <item>Elise</item>
+        <item>John</item>
+        <item>Buck</item>
+        <item>Uriel</item>
+    </string-array>
+
+    <string-array name="item_Models_Email">
+        <item>shaunaqpaulofficial@gmail.com</item>
+        <item>mileeofficial@gmail.com</item>
+        <item>emmaofficial@gmail.com</item>
+        <item>martinofficial@gmail.com</item>
+        <item>eliseofficial@gmail.com</item>
+        <item>johnofficial@gmail.com</item>
+        <item>buckofficial@gmail.com</item>
+        <item>urielofficial@gmail.com</item>
+    </string-array>
+
+    <string-array name="item_Models_Description">
+        <item>My name is Shaunaq. My email id is shaunaqpaulofficial@gmail.com. I am a boy.</item>
+        <item>My name is Milee. My email id is mileeofficial@gmail.com. I am a girl.</item>
+        <item>My name is Emma. My email id is emmaofficial@gmail.com. I am a girl.</item>
+        <item>My name is Martin. My email id is martinofficial@gmail.com. I am a boy.</item>
+        <item>My name is Elise. My email id is eliseofficial@gmail.com. I am a girl.</item>
+        <item>My name is John. My email id is johnofficial@gmail.com. I am a boy.</item>
+        <item>My name is Buck. My email id is buckofficial@gmail.com. I am a boy.</item>
+        <item>My name is Uriel. My email id is urielofficial@gmail.com. I am a boy.</item>
+    </string-array>
+
 </resources>

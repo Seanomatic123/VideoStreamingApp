@@ -4,47 +4,63 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends AppCompatActivity {
+public class RecyclerViewActivity extends AppCompatActivity implements RecyclerViewInterface {
+
+    ArrayList<ItemModel> itemModels = new ArrayList<>();
+    int[] itemModelsImage = {
+            R.drawable.a,
+            R.drawable.b,
+            R.drawable.c,
+            R.drawable.d,
+            R.drawable.e,
+            R.drawable.f,
+            R.drawable.g,
+            R.drawable.h
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_activity);
 
+
+
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
-        List<Item> items = new ArrayList<Item>();
-        items.add(new Item("Shaunaq", "shaunaqpaulofficial@gmail.com", R.drawable.a));
-        items.add(new Item("Milee", "mileeofficial@gmail.com", R.drawable.b));
-        items.add(new Item("Emma", "emmaofficial@gmail.com", R.drawable.c));
-        items.add(new Item("Martin", "martinofficial@gmail.com", R.drawable.d));
-        items.add(new Item("Elise", "eliseofficial@gmail.com", R.drawable.e));
-        items.add(new Item("John", "johnofficial@gmail.com", R.drawable.f));
-        items.add(new Item("Buck", "buckofficial@gmail.com", R.drawable.g));
-        items.add(new Item("Uriel", "urielofficial@gmail.com", R.drawable.h));
-        items.add(new Item("Shaunaq", "shaunaqpaulofficial@gmail.com", R.drawable.a));
-        items.add(new Item("Milee", "mileeofficial@gmail.com", R.drawable.b));
-        items.add(new Item("Emma", "emmaofficial@gmail.com", R.drawable.c));
-        items.add(new Item("Martin", "martinofficial@gmail.com", R.drawable.d));
-        items.add(new Item("Elise", "eliseofficial@gmail.com", R.drawable.e));
-        items.add(new Item("John", "johnofficial@gmail.com", R.drawable.f));
-        items.add(new Item("Buck", "buckofficial@gmail.com", R.drawable.g));
-        items.add(new Item("Uriel", "urielofficial@gmail.com", R.drawable.h));
-        items.add(new Item("Shaunaq", "shaunaqpaulofficial@gmail.com", R.drawable.a));
-        items.add(new Item("Milee", "mileeofficial@gmail.com", R.drawable.b));
-        items.add(new Item("Emma", "emmaofficial@gmail.com", R.drawable.c));
-        items.add(new Item("Martin", "martinofficial@gmail.com", R.drawable.d));
-        items.add(new Item("Elise", "eliseofficial@gmail.com", R.drawable.e));
-        items.add(new Item("John", "johnofficial@gmail.com", R.drawable.f));
-        items.add(new Item("Buck", "buckofficial@gmail.com", R.drawable.g));
-        items.add(new Item("Uriel", "urielofficial@gmail.com", R.drawable.h));
-
+        setUpItemModels();
+        MyAdapter adapter = new MyAdapter(this, itemModels, this);
+        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new MyAdapter(getApplicationContext(), items));
+
+    }
+
+    private void setUpItemModels() {
+        String[] itemModelsName = getResources().getStringArray(R.array.item_Models_Name);
+        String[] itemModelsEmail = getResources().getStringArray(R.array.item_Models_Email);
+        String[] itemModelsDescription = getResources().getStringArray(R.array.item_Models_Description);
+
+        for (int i = 0; i<itemModelsName.length; i++){
+            itemModels.add(new ItemModel(itemModelsName[i],
+                                         itemModelsEmail[i],
+                                         itemModelsImage[i],
+                                         itemModelsDescription[i]));
+        }
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(RecyclerViewActivity.this, ProfileDetailActivity.class);
+
+        intent.putExtra("NAME", itemModels.get(position).getName());
+        intent.putExtra("EMAIL", itemModels.get(position).getEmail());
+        intent.putExtra("DESCRIPTION", itemModels.get(position).getDescription());
+        intent.putExtra("IMAGE", itemModels.get(position).getImage());
+
+        startActivity(intent);
     }
 }
