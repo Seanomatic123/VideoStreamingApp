@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private Button unlockVideo;
     private ImageButton liveVideoButton;
 
+    private Button recyclerViewButtonPress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         unlockVideo = (Button) findViewById(R.id.button);
         unlockVideo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 openUnlockVideoActivity();
             }
         });
+
+        recyclerViewButtonPress = (Button) findViewById(R.id.recyclerViewButton);
+        recyclerViewButtonPress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { openRecyclerViewActivity();}
+        });
+
     }
 
     public void openUnlockVideoActivity() {
@@ -45,5 +53,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent5 = new Intent(this, LiveVideoChoiceActivity.class);
         startActivity(intent5);
     }
-
+    public void openRecyclerViewActivity() {
+        Intent intent7 = new Intent(this, RecyclerViewActivity.class);
+        startActivity(intent7);
+    }
 }

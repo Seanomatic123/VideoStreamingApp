@@ -104,7 +104,7 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="180dp"
+            android:layout_width="110dp"
             android:layout_height="21dp"
             android:fontFamily="@font/noir_pro_regular"
             android:text="\u0040arlene_47"
@@ -112,7 +112,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageavatar1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.107"
+            app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toEndOf="@+id/imageavatar1"
             app:layout_constraintTop_toTopOf="@+id/imageavatar1" />
 
@@ -510,6 +510,16 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@android:drawable/ic_media_play"
             app:tint="#542dc3"/>
+
+        <Button
+            android:id="@+id/recyclerViewButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="L"
+            android:backgroundTint="@color/yellowbutton"
+            app:layout_constraintBottom_toBottomOf="@+id/livevideobutton1"
+            app:layout_constraintEnd_toStartOf="@+id/livevideobutton1"
+            app:layout_constraintTop_toTopOf="@+id/livevideobutton1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
