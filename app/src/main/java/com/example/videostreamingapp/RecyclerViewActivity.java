@@ -55,12 +55,7 @@ public class RecyclerViewActivity extends AppCompatActivity implements RecyclerV
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(RecyclerViewActivity.this, ProfileDetailActivity.class);
-
-        intent.putExtra("NAME", itemModels.get(position).getName());
-        intent.putExtra("EMAIL", itemModels.get(position).getEmail());
-        intent.putExtra("DESCRIPTION", itemModels.get(position).getDescription());
-        intent.putExtra("IMAGE", itemModels.get(position).getImage());
-
+        intent.putExtra("ITEM", itemModels.get(position));
         startActivity(intent);
     }
 }

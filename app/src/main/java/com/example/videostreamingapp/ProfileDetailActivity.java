@@ -21,20 +21,24 @@ public class ProfileDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_detail);
 
-        String name = getIntent().getStringExtra("NAME");
-        String email = getIntent().getStringExtra("EMAIL");
-        String description = getIntent().getStringExtra("DESCRIPTION");
-        int image = getIntent().getIntExtra("IMAGE", 0);
+        Intent intent = getIntent();
+
+        ItemModel itemModel = intent.getParcelableExtra("ITEM");
+
+        String name = itemModel.getName();
+        String email = itemModel.getEmail();
+        int image = itemModel.getImage();
+        String description = itemModel.getDescription();
 
         TextView nameTextView = findViewById(R.id.textProfileNameView);
         TextView emailTextView = findViewById(R.id.textProfileEmailView);
-        TextView descriptionTextView = findViewById(R.id.textProfileDescriptionView);
         ImageView imageProfileView = findViewById(R.id.imageProfileView);
+        TextView descriptionTextView = findViewById(R.id.textProfileDescriptionView);
 
         nameTextView.setText(name);
         emailTextView.setText(email);
-        descriptionTextView.setText(description);
         imageProfileView.setImageResource(image);
+        descriptionTextView.setText(description);
 
         profilePreviousButton = (ImageButton) findViewById(R.id.profilePrevScreen);
         profilePreviousButton.setOnClickListener(new View.OnClickListener() {

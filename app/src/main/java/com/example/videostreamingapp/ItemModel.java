@@ -1,8 +1,12 @@
 package com.example.videostreamingapp;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class ItemModel {
+import androidx.annotation.NonNull;
+
+
+public class ItemModel implements Parcelable {
     String name;
     String email;
     int image;
@@ -14,6 +18,25 @@ public class ItemModel {
         this.image = image;
         this.description = description;
     }
+
+    protected ItemModel(Parcel in) {
+        name = in.readString();
+        email = in.readString();
+        image = in.readInt();
+        description = in.readString();
+    }
+
+    public static final Creator<ItemModel> CREATOR = new Creator<ItemModel>() {
+        @Override
+        public ItemModel createFromParcel(Parcel in) {
+            return new ItemModel(in);
+        }
+
+        @Override
+        public ItemModel[] newArray(int size) {
+            return new ItemModel[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -46,13 +69,17 @@ public class ItemModel {
     public void setDescription(String description) {
         this.description = description;
     }
-//    @Override
-//    public boolean equals(@Nullable Object obj) {
-//        if(obj == this)
-//            return true;
-//        if(!(obj instanceof Item))
-//            return false;
-//        Item item = (Item) obj;
-//        return Objects.equals(item.email, this.email);
-//    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(email);
+        parcel.writeInt(image);
+        parcel.writeString(description);
+    }
 }
