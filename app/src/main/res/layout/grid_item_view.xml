@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:scaleType="centerCrop"
         android:src="@drawable/gift_0_confused"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -45,4 +45,11 @@
         <item>89</item>
     </string-array>
 
+    <string name="rank1gifter">Shikha Jas</string>
+    <string name="rank1giftercurrency">1280</string>
+    <string name="rank2gifter">Ms. Bean</string>
+    <string name="rank2giftercurrency">589</string>
+    <string name="rank3gifter">Romeo bhai</string>
+    <string name="rank3giftercurrency">400</string>
+
 </resources>

@@ -12,6 +12,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
@@ -62,6 +63,8 @@ public class GiftGridActivity extends AppCompatActivity {
         GridLayout gridLayout = findViewById(R.id.gridEmoteLayout);
 
         for (int i = 0; i < giftModelImage1.length; i++) {
+            final int position = i;
+
             View gridItemView = LayoutInflater.from(this).inflate(R.layout.grid_item_view, null);
 
             ImageView imageView1 = gridItemView.findViewById(R.id.imageEmoteView);
@@ -72,11 +75,21 @@ public class GiftGridActivity extends AppCompatActivity {
             imageView2.setImageResource(giftModelImage2[i]);
             textView.setText(giftModelText[i]);
 
+            gridItemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String message = "This gift costs " + giftModelText[position];
+                    Toast.makeText(GiftGridActivity.this, message, Toast.LENGTH_LONG).show();
+                }
+            });
+
             gridLayout.addView(gridItemView);
 
             GridLayout.LayoutParams layoutParams = (GridLayout.LayoutParams) gridItemView.getLayoutParams();
             layoutParams.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
             gridItemView.setLayoutParams(layoutParams);
+
+
         }
 
     }
