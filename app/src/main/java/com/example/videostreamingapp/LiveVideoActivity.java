@@ -25,6 +25,7 @@ import io.agora.rtc2.video.VideoCanvas;
 import io.agora.rtc2.video.VideoEncoderConfiguration;
 
 import com.banuba.android.sdk.ext.agora.BanubaExtensionManager;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 
 import java.util.Arrays;
@@ -64,7 +65,6 @@ public class LiveVideoActivity extends AppCompatActivity {
     private boolean isFrontCamera = true;
     private String channelName;
     private int channelRole;
-
     private boolean isMakeUpApplied = false;
     BanubaExtensionManager banubaExtensionManager = BanubaExtensionManager.INSTANCE;
 
@@ -104,6 +104,7 @@ public class LiveVideoActivity extends AppCompatActivity {
         invalidateUiState();
 
         findViewById(R.id.joinButton).setOnClickListener(v -> joinChannel());
+
         findViewById(R.id.applyTeethButton).setOnClickListener(v -> {
             isMakeUpApplied = !isMakeUpApplied;
             banubaExtensionManager.loadEffectFromAssets("Makeup");
@@ -114,12 +115,16 @@ public class LiveVideoActivity extends AppCompatActivity {
                 banubaExtensionManager.evalJs("Teeth.clear()");
             }
         });
+
+
+
         findViewById(R.id.applyEffectButton).setOnClickListener(v -> {
             toggleEffect();
             String effectName = getCurrentEffect();
             Log.d(TAG, "Prepare effect = " + effectName);
             banubaExtensionManager.loadEffectFromAssets(effectName);
         });
+
         enableBanubaExtension(true);
 
 

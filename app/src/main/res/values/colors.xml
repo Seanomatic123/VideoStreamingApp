@@ -8,4 +8,6 @@
     <color name="whitebackground">#f9fafe</color>
     <color name="blacktext">#191C1D</color>
     <color name="yellowbutton">#EA9C29</color>
+    <color name="lightgreyback">#979797</color>
+    <color name="cardbackgroundgrey">#805A5A5A</color>
 </resources>

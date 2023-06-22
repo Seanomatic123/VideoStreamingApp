@@ -521,6 +521,22 @@
             app:layout_constraintEnd_toStartOf="@+id/livevideobutton1"
             app:layout_constraintTop_toTopOf="@+id/livevideobutton1" />
 
+        <Button
+            android:id="@+id/buttonTestTopGifters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gifter"
+            app:layout_constraintStart_toEndOf="@+id/previousscreenbuttonmain"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonTestGridEmotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grid"
+            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

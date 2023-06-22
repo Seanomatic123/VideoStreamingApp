@@ -39,4 +39,10 @@
         <item>My name is Uriel. My email id is urielofficial@gmail.com. I am a boy.</item>
     </string-array>
 
+    <string-array name="gift_item_currency">
+        <item>99</item>
+        <item>59</item>
+        <item>89</item>
+    </string-array>
+
 </resources>

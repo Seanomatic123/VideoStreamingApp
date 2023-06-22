@@ -13,8 +13,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Button unlockVideo;
     private ImageButton liveVideoButton;
-
     private Button recyclerViewButtonPress;
+    private Button testButtonTopGifters;
+    private Button testButtonGridEmotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,32 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) { openRecyclerViewActivity();}
         });
 
+        testButtonTopGifters = (Button) findViewById(R.id.buttonTestTopGifters);
+        testButtonTopGifters.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTopGiftersActivity();
+            }
+        });
+
+        testButtonGridEmotes = (Button) findViewById(R.id.buttonTestGridEmotes);
+        testButtonGridEmotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGiftGridActivity();
+            }
+        });
+
+    }
+
+    private void openGiftGridActivity() {
+        Intent intent = new Intent(this, GiftGridActivity.class);
+        startActivity(intent);
+    }
+
+    private void openTopGiftersActivity() {
+        Intent intent = new Intent(this, TopGiftersActivity.class);
+        startActivity(intent);
     }
 
     public void openUnlockVideoActivity() {
